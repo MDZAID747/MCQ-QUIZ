@@ -6,6 +6,8 @@ session_start();
   mysqli_select_db($con,'quizdbase');//used to change the default database for the connection
   ?>
 
+<?php error_reporting (E_ALL ^ E_NOTICE); ?>
+
   <!DOCTYPE html>
   <html>
   <head>

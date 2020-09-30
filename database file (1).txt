@@ -273,4 +273,33 @@ MariaDB [quizdbase]> select * from answers;
 +-----+-------------------------------+--------+
 20 rows in set (0.021 sec)
 
-MariaDB [quizdbase]>
+MariaDB [quizdbase]> create database sessionpractical;
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [quizdbase]> use sessionpractical;
+Database changed
+MariaDB [sessionpractical]> show tables;
+Empty set (0.000 sec)
+
+MariaDB [sessionpractical]> create table signin(id int(255) auto_increment not null primary key,name varchar(255) not null,password varchar(255) not null);
+Query OK, 0 rows affected (0.224 sec)
+
+MariaDB [sessionpractical]> show tables;
++----------------------------+
+| Tables_in_sessionpractical |
++----------------------------+
+| signin                     |
++----------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [sessionpractical]> desc signin;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int(255)     | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(255) | NO   |     | NULL    |                |
+| password | varchar(255) | NO   |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+3 rows in set (0.020 sec)
+
+MariaDB [sessionpractical]>
